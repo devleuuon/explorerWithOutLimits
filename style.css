@@ -1,0 +1,303 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Mulish', sans-serif;
+    font-size: 1.6rem;
+}
+
+.page {
+    max-width: 43rem;
+    margin: auto;
+}
+
+.header-explorer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.robot-image {
+    margin-bottom: 1.7rem;
+
+    --delay: 0.1s; /*colocar função no html com o tempo pretendido*/
+    animation: appear 4.2s var(--delay) backwards; /*backwards*/
+}
+
+h1 {
+    color: #B52184;
+    font-size: 3.2rem;
+    text-align: center;
+}
+
+h3 {
+    color: #312D64;
+    font-size: 2.0rem;
+    margin: 0.5rem 0 3.5rem;
+}
+
+.header-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-explorer :nth-child(3) {
+    cursor: pointer;
+    margin-bottom: 9.3rem;
+}
+
+
+main {
+    background: linear-gradient(96deg, #343193 0%, #302C63 99.68%);
+    padding: 0.1rem 0;
+}
+
+.card {
+    width: 35.2rem;
+    height: 33.8rem;
+    background-color: white;
+    margin: 5.3rem auto;
+    padding: 2.6rem;
+    border-radius: 2.0rem;
+    box-shadow: 0px 3.311px 13.243px 0px rgba(0, 0, 0, 0.25);
+
+    --delay: .2s; /*colocar função no html com o tempo pretendido*/
+    animation: appear 2.2s var(--delay) backwards; /*backwards*/
+}
+
+
+.card img {
+    margin-bottom: 1.3rem;
+    width: 8.0rem;
+}
+
+h2 {
+    color: #B52184;
+    font-size: 2.9rem;
+    margin-bottom: 1.3rem;
+}
+
+p {
+    width: 26.5rem;
+    height: 15.1rem;
+    color: #312D64;
+}
+
+.three {
+    height: 35.7rem;
+}
+
+aside {
+    padding-left: 4.0rem;
+}
+
+.contact h1 {
+    margin: 3.5rem 0 4.3rem;
+    text-align: left;
+}
+
+label {
+    display: none;
+}
+
+input {
+    width: 34.8rem;
+    height: 4.8rem;
+    margin-bottom: 2.4rem;
+    padding: 0 5rem;
+    border-radius: 16px;
+    border: 1.5px solid #312D64;
+}
+
+input::placeholder {
+    color: #312D64;
+    padding: 5rem;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+textarea {
+    width: 34.8rem;
+    height: 12.6rem;
+    margin-bottom: 2.4rem;
+    padding: 1.2rem;
+    border-radius: 16px;
+    border: 1.5px solid #312D64;
+}
+
+textarea::placeholder {
+    color: #312D64;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+#input-name {
+    background-image: url(./images/person.svg);
+    background-repeat: no-repeat;
+    background-position: 5%;
+}
+
+#input-email {
+    background-image: url(./images/@.svg);
+    background-repeat: no-repeat;
+    background-position: 5%;
+}
+
+button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 15.1rem;
+    height: 4.5rem;
+    padding: 1.6rem;
+    margin-bottom: 6.5rem;
+    text-align: center;
+    cursor: pointer;
+    background: linear-gradient(96deg, #343193 0%, #302C63 99.68%);
+    border-radius: 16px;
+    border: none;
+    font-size: 1.4rem;
+    color: white;
+    line-height: 24px;
+}
+
+.stars {
+    display: none;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 7.8rem;
+    background: linear-gradient(96deg, #343193 0%, #302C63 99.68%);
+    --startY: 100%; /*de cima para baixo*/
+    animation: move .2s;
+}
+
+.footer p {
+    color: white;
+    font-size: 1.9rem;
+    margin-top: 2.5rem;
+}
+
+@media (min-width: 70.0rem ) {
+    .page {
+        display: grid;
+        grid-template-areas: 
+        "header header header"
+        "main main main"
+        "aside aside"
+        "footer footer footer";
+        max-width: 100%;
+    }
+    
+    .header-explorer {
+        display: flex;
+        /* height: 83.6rem; */
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 2.8rem;
+    }
+    
+    .robot-image img {
+        width: 71.9rem;
+        height: 73.2rem;
+        margin-bottom: 10.3rem;
+    }
+
+    .header-explorer h1 {
+        font-size: 5.8rem;
+    }
+
+    .header-explorer h3 {
+        font-size: 3.2rem;
+    }
+
+    .header-info {
+        align-items: start;
+    }
+
+    .header-info img {
+        margin-top: 17.9rem;
+    }
+
+    .dad-card {
+        display: flex;
+        padding: 6.4rem 11.1rem;
+    }
+
+    .card, .three {
+        height: 44.8rem;
+        padding: 2.5rem;
+    }
+
+    .card img {
+        width: 9.0rem;
+    }
+
+    h2 {
+        font-size: 3.5rem;
+    }
+
+    p {
+        width: 32.1rem;
+        height: 15.8rem;
+        font-size: 1.9rem;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+    }
+
+    input, textarea {
+        width: 59.2rem;
+    }
+
+    #input-name {
+        background-position: 3%;
+    }
+
+    #input-email {
+        background-position: 3%;
+    }
+
+    .dad-contact {
+        display: flex;
+        justify-content: space-between;
+        gap: 9.2rem;
+        margin-left: 10.9rem;
+    }
+
+    .stars {
+        display: block;
+        right: 0;
+    }
+}
+
+@keyframes move {
+    from {
+        transform: translateY(var(--startY));
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: scale(0.7); /*backwards*/
+    }
+
+    50% {
+        transform: scale(1.2); /*forwards*/
+    }
+}
